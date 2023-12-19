@@ -91,7 +91,6 @@ jobs:
         
         - name: Sync Source
           run: |
-              cd ~/ofrp/sync
               ./${{ inputs.SYNC_FILE }} --branch ${{ inputs.MANIFEST_BRANCH }} -path ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
           working-directory: ${{ steps.pwd.outputs.workspace-folder }}
         
