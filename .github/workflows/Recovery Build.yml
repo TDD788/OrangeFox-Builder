@@ -108,6 +108,7 @@ jobs:
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         set +e
         export FOX_AB_DEVICE=1
+        export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
         export FOX_VANILLA_BUILD=1    
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
