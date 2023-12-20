@@ -109,6 +109,7 @@ jobs:
         set +e
         export FOX_AB_DEVICE=1
         export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+        export FOX_BUILD_DEVICE=${{ github.event.inputs.DEVICE_NAME }}
         export FOX_VANILLA_BUILD=1    
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
